@@ -37,8 +37,5 @@ The CSV data is not included in this repository. Download train.csv from Kaggle 
 ## Key Findings
 Complete this section after running the notebook. Include actual percentages and group
  comparisons from your results.
-## Limitations
-This is a beginner exploratory analysis. Missing Age values are filled using the overall
- median, Cabin is dropped due to extensive missingness, and observed associations do
- not prove causation.
+ 
 Author: Muhammad Abdullah
