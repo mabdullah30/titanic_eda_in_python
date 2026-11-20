@@ -1,41 +1,72 @@
-# Titanic Passenger Survival - Beginner EDA with Pandas
-## Project Overview
-This project explores the Kaggle Titanic training dataset using Python and Pandas. It
- inspects the data, checks missing values and duplicates, performs simple cleaning,
- and compares survival rates across passenger groups.
-## Tools
-- Python
-- Pandas
-- Jupyter Notebook
-- VS Code
+# Titanic Passenger Survival — Pandas EDA
+
+An exploratory data analysis of the Kaggle Titanic training dataset using Python and Pandas only.
+
+The analysis inspects the dataset, handles missing values, examines passenger survival rates, and saves a cleaned CSV file.
+
 ## Dataset
-Source: https://www.kaggle.com/competitions/titanic
-The CSV data is not included in this repository. Download train.csv from Kaggle and
- place it in data/raw/.
+
+Source: [Kaggle Titanic Competition](https://www.kaggle.com/competitions/titanic)
+
+The training data is located at `data/raw/train.csv`.
+
+## Analysis
+
+The notebook covers:
+
+- Dataset shape and structure
+- Summary statistics
+- Missing values and duplicate records
+- Missing age and embarkation port handling
+- Removal of the Cabin column
+- Overall survival rate
+- Survival rates by sex, passenger class, embarkation port, and age group
+- Correlations between numerical variables
+- Export of cleaned data to `data/processed/titanic_cleaned.csv`
+
+## Key Results
+
+- 342 of 891 passengers survived (38.38%).
+- Female passengers had a 74.20% survival rate, compared with 18.89% for male passengers.
+- First-class passengers had the highest survival rate at 62.96%, followed by second class at 47.28% and third class at 24.24%.
+- Survival rates were 55.36% at Cherbourg, 38.96% at Queenstown, and 33.90% at Southampton.
+- Children had the highest survival rate among the age groups at 57.97%.
+
 ## Project Structure
-- data/raw/ - original Kaggle files (not committed)
-- data/processed/ - cleaned data (not committed)
-- notebooks/ - Jupyter notebook
-- requirements.txt - Python packages
-## Analysis Steps
-1. Load and inspect the dataset.
-2. Review summary statistics and data types.
-3. Identify missing values and duplicates.
-4. Fill missing Age and Embarked values and drop Cabin.
-5. Compare survival by gender, passenger class, embarkation port, age group, and family
- size.
-6. Review fare statistics and a correlation table.
-## How to Run
-1. Clone this repository.
-2. Download train.csv from Kaggle into data/raw/.
-3. Create a virtual environment: python -m venv .venv
-4. Activate it on Windows PowerShell: .\.venv\Scripts\Activate.ps1
-5. Install packages: python -m pip install -r requirements.txt
-6. Open the project folder in VS Code.
-7. Open notebooks/Titanic_EDA_Beginner_Pandas.ipynb, select the .venv kernel, and run
- cells from top to bottom.
-## Key Findings
-Complete this section after running the notebook. Include actual percentages and group
- comparisons from your results.
- 
-Author: Muhammad Abdullah
+
+```text
+Titanic_EDA_In_Python/
+├── data/
+│   ├── raw/
+│   │   └── train.csv
+│   └── processed/
+│       └── titanic_cleaned.csv
+├── notebooks/
+│   └── Titanic_EDA_Pandas.ipynb
+└── readme.md
+```
+
+## Setup
+
+Create and activate a virtual environment:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+Install the required packages:
+
+```powershell
+python -m pip install pandas jupyter
+```
+
+Open `notebooks/Titanic_EDA_Pandas.ipynb` in Jupyter or VS Code and run the cells from top to bottom.
+
+## Limitations
+
+Missing ages were replaced with the median age, and missing embarkation ports were replaced with the most common port. The Cabin column was removed because it contains many missing values. The analysis describes patterns in the training data and does not establish causation.
+
+## Author
+
+Muhammad Abdullah
